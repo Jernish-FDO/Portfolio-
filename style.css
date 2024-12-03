@@ -1,0 +1,41 @@
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.hero {
+  height: 100vh;
+  background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.projects {
+  display: flex;
+  gap: 20px;
+}
+/* Animation */
+.content, .projects .project {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+.content.visible, .projects .project.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
